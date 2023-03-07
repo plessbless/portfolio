@@ -107,6 +107,11 @@
             }
         }
     }
+    .promo-menu {
+        &__text {
+            line-height: 40px;
+        }
+    }
     .resume {
         &__wrapper {
             padding: 60px 10px 0 10px;
@@ -227,6 +232,7 @@
         }
         &_fz36 {
             font-size: 20px;
+            line-height: 40px;
         }
     }
     .hamburger {
@@ -243,6 +249,14 @@
             margin-top: 30px;
         }
         background: url('../img/main_bg.jpg') no-repeat 58%/cover;
+    }
+    .promo-menu {
+        &__block {
+            padding-left: 20px;
+        }
+        &__text {
+            margin: 0 10px 10px 0;
+        }
     }
     .about {
         &__wrapper {

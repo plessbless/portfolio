@@ -8,7 +8,7 @@
         padding: 0 10px;
         position: relative;
         display: grid;
-        grid-template-columns: repeat(4, minmax(270px, auto));
+        grid-template-columns: repeat(4, 270px);
         grid-template-rows: repeat(2, minmax(270px, auto));
         gap: 13px;
     }
@@ -21,6 +21,12 @@
             align-items: center;
             justify-content: center;
             min-height: 65px;
+        
+        }
+        &-dumb {
+            img {
+                height: 55px;
+            }
         }
     }
     h3 {
