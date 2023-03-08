@@ -104,7 +104,7 @@
                     <h2 class="title title_fz16 about__title">Про меня</h2>
                     <div class="title title_fz36 about__subtitle">Меня зовут Илья Плесовских</div>
                     <div class="divider"></div>
-                    <p class="about__text">Привет, как ты уже заметил, меня зовут Илья. Я начинающий Front-End разработчик с небольшим, но стремительно развивающимся опытом! Открываю для себя новые технологии в каждом проекте и горю этим делом!  В свободное время занимаюсь продюсированием музыки в разных жанрах. </p>
+                    <p class="about__text">Привет, как Вы уже заметили, меня зовут Илья. Я начинающий Front-End разработчик с небольшим, но стремительно развивающимся опытом! Открываю для себя новые технологии в каждом проекте и горю этим делом!  В свободное время занимаюсь продюсированием музыки в разных жанрах. </p>
                 </div>
                 <div class="about__skills">
                     <div class="about__skills-item">
@@ -182,7 +182,7 @@
                                     <h4 class="title title_fz14">Московский Политехнический Университет</h4>
                                     <div class="resume__item-location">Диплом магистра | Москва (2019-2021)</div>
                                 </div>
-                                <div class="resume__item-body">Диплом магистра по специальности защита облачных хранилищ получить,к сожалению, не получилось по причине COVID-19. Но Университет дал большой буст в знании back-end разработки.</div>
+                                <div class="resume__item-body">Диплом магистра по специальности защиты облачных хранилищ получить,к сожалению, не получилось по причине COVID-19. Но Университет дал большой буст в знании back-end разработки.</div>
                             </div>
                         </li>
                         <li>
@@ -387,6 +387,7 @@
             </div>
             <div class="promo-menu__overlay"></div>
         </div>
+        <!--  -->
     </section>
 
     <section class="contacts" id="contacts">
@@ -414,7 +415,7 @@
                         Или оставьте Ваши данные и я сам Вам напишу:
                     </div>
 
-                    <form action="#" class="contacts__form">
+                    <form action="#" class="contacts__form" id="contact-form">
                         <div class="contacts__input">
                             <input required name="name" id="name" type="text">
                             <label for="name">Ваше имя</label>
@@ -428,9 +429,9 @@
                             <label for="text">Ваше сообщение</label>
                         </div>
                         <div class="contacts__triggers">
-                            <button class="contacts__btn btn">Отправить сообщение</button>
+                            <button data-modal="accept" class="contacts__btn btn accept">Отправить сообщение</button>
                             <div class="contacts__policy">
-                                <input required type="checkbox">
+                                <input required name="checkbox" type="checkbox">
                                 <span>Я согласен(-на) с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></span>
                             </div>
                         </div>
@@ -440,6 +441,17 @@
         </div>
     </section>
 
+    <div class="overlay">
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо!</div>
+            <div class="modal__descr">Я свяжусь с Вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="js/jquery.validate.min.js"></script> -->
     <script src="js/script.js"></script>
 </body>
 </html>

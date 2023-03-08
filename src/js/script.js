@@ -42,3 +42,61 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+
+
+// $('[data-modal="accept"]').on('click', function () {
+//     $('.overlay, #thanks').fadeIn();
+// });
+// $('.modal__close').on('click', function () {
+//     $('.overlay, #thanks').fadeOut();
+// });
+
+
+// $(document).ready(function(){
+//     $('#contact-form form').validate({
+//         rules: {
+//             name: {
+//                 required: true,
+//                 minlength: 2
+//             },
+//             email: {
+//                 required: true,
+//                 email: true
+//             },
+//             messages: {
+//                 name: {
+//                     required:  "Пожалуйста, введите своё имя",
+//                     minlength: jQuery.validator.format("Введите {0} символа!")
+//                 },
+//                 email: {
+//                     required: "Пожалуйста, введите свою почту",
+//                     email: "Неправильно ввведен адрес почты"
+//                 },
+//                 checkbox: {
+//                     required: "Подтвердите Ваше согласие"
+//                 }
+    
+//             },
+//             checkbox: "required"
+//         }
+//     });
+// });
+
+//  / 
+
+$('form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        $('.overlay, #thanks').fadeIn('slow');
+        $('form').trigger('reset');
+    });
+    return false;
+});
+$('.modal__close').on('click', function () {
+    $('.overlay, #thanks').fadeOut();
+});

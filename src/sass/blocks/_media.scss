@@ -177,7 +177,7 @@
             grid-template: 400px auto auto  / 1fr;
         }
         &__photo {
-            grid-row: unset;
+            display: none;
         }
         &__skills {
             grid-template-columns: repeat(2, 260px);
